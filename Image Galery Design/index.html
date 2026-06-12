@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern responsive image gallery with filtering and lightbox preview.">
+  <title>Image Gallery | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for a clean, modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Image Gallery</h1>
+      <p class="header__subtitle">Explore curated photography — filter by category and view in full size.</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+
+      <!-- Category filter buttons -->
+      <nav class="filters" aria-label="Gallery categories">
+        <button class="filters__btn filters__btn--active" data-filter="all" type="button">All</button>
+        <button class="filters__btn" data-filter="nature" type="button">Nature</button>
+        <button class="filters__btn" data-filter="animals" type="button">Animals</button>
+        <button class="filters__btn" data-filter="cities" type="button">Cities</button>
+        <button class="filters__btn" data-filter="technology" type="button">Technology</button>
+      </nav>
+
+      <!-- Gallery grid: each item has a category for filtering -->
+      <section class="gallery" id="gallery" aria-label="Photo gallery">
+
+        <article class="gallery__item" data-category="nature">
+          <button class="gallery__trigger" type="button" aria-label="View Misty Forest">
+            <img class="gallery__img" src="https://picsum.photos/id/10/800/600" alt="Misty forest landscape" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Misty Forest</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="nature">
+          <button class="gallery__trigger" type="button" aria-label="View Mountain Lake">
+            <img class="gallery__img" src="https://picsum.photos/id/28/800/600" alt="Mountain lake at sunrise" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Mountain Lake</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="nature">
+          <button class="gallery__trigger" type="button" aria-label="View Rolling Hills">
+            <img class="gallery__img" src="https://picsum.photos/id/29/800/600" alt="Rolling green hills" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Rolling Hills</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="animals">
+          <button class="gallery__trigger" type="button" aria-label="View Golden Retriever">
+            <img class="gallery__img" src="https://picsum.photos/id/237/800/600" alt="Golden retriever puppy" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Golden Retriever</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="animals">
+          <button class="gallery__trigger" type="button" aria-label="View Black Cat">
+            <img class="gallery__img" src="https://picsum.photos/id/219/800/600" alt="Black cat portrait" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Black Cat</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="animals">
+          <button class="gallery__trigger" type="button" aria-label="View Husky">
+            <img class="gallery__img" src="https://picsum.photos/id/1025/800/600" alt="Husky dog in snow" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Husky</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="cities">
+          <button class="gallery__trigger" type="button" aria-label="View City Skyline">
+            <img class="gallery__img" src="https://picsum.photos/id/334/800/600" alt="City skyline at dusk" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">City Skyline</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="cities">
+          <button class="gallery__trigger" type="button" aria-label="View Urban Street">
+            <img class="gallery__img" src="https://picsum.photos/id/338/800/600" alt="Busy urban street" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Urban Street</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="cities">
+          <button class="gallery__trigger" type="button" aria-label="View Night City">
+            <img class="gallery__img" src="https://picsum.photos/id/366/800/600" alt="City lights at night" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Night City</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="technology">
+          <button class="gallery__trigger" type="button" aria-label="View Workspace">
+            <img class="gallery__img" src="https://picsum.photos/id/180/800/600" alt="Modern workspace setup" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Workspace</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="technology">
+          <button class="gallery__trigger" type="button" aria-label="View Laptop Code">
+            <img class="gallery__img" src="https://picsum.photos/id/326/800/600" alt="Laptop with code on screen" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Laptop Code</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="gallery__item" data-category="technology">
+          <button class="gallery__trigger" type="button" aria-label="View Server Room">
+            <img class="gallery__img" src="https://picsum.photos/id/403/800/600" alt="Technology and circuits" loading="lazy" width="800" height="600">
+            <span class="gallery__overlay">
+              <span class="gallery__caption">Tech Detail</span>
+            </span>
+          </button>
+        </article>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Lightbox modal for full-size image preview -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+
+    <div class="lightbox__content">
+      <!-- Close button -->
+      <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close preview">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <!-- Previous image -->
+      <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Previous image">
+        <span aria-hidden="true">&#10094;</span>
+      </button>
+
+      <!-- Full-size image -->
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+      </figure>
+
+      <!-- Next image -->
+      <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Next image">
+        <span aria-hidden="true">&#10095;</span>
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Images from <a href="https://picsum.photos" target="_blank" rel="noopener noreferrer">Picsum Photos</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
